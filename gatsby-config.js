@@ -36,6 +36,15 @@ module.exports = {
       resolve: `gatsby-source-wordpress-experimental`,
       options: {
         url: `${process.env.WORDPRESS_SITE_URL}graphql`,
+        debug: {
+          graphql: {
+            showQueryVarsOnError: true,
+            copyQueryOnError: true,
+          },
+        },
+        schema: {
+          perPage: 1,
+        },
       },
     },
     //image inline setup
